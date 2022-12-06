@@ -1,5 +1,5 @@
 <template>
-    <div @click="menuStore.addCategory({id: 4, name: 'Max'})">
+    <div class="sidebar">
         sidebar
     </div>
 </template>
@@ -15,5 +15,14 @@
 </script>
 
 <style lang="scss" scoped>
-
+$sodebar_background: black;
+.sidebar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 13vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: $sodebar_background;
+}
 </style>
