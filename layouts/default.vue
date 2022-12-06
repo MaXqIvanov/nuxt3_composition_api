@@ -23,10 +23,11 @@ $background_color: black;
 }
 </style>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 html, body{
     padding: 0px;
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
+    overflow-y: auto;
 }
 </style>

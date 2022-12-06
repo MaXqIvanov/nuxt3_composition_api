@@ -1,8 +1,9 @@
 <template>
     <div>
         <v-carousel
+        height="25vw"
         cycle
-        height="400"
+        class="carouser__item"
         hide-delimiter-background
         show-arrows-on-hover
       >
@@ -11,7 +12,8 @@
           :key="i"
         >
           <v-sheet
-            :color="colors[i]"
+            class="image"
+            :style="{backgroundImage: `url(${img_slide[i]})`}"
             height="100%"
           >
             <v-row
@@ -20,7 +22,7 @@
               justify="center"
             >
               <div class="text-h2">
-                {{ slide }} Slide
+                {{ slide }}
               </div>
             </v-row>
           </v-sheet>
@@ -30,21 +32,28 @@
 </template>
 
 <script setup lang="ts">
+import slide0 from '~/assets/slide.jpeg'
+import slide1 from '~/assets/slide2.jpeg'
+import slide2 from '~/assets/slide3.jpeg'
+
 const slides = [
-    'First',
-    'Second',
-    'Third',
-    'Fourth',
-    'Fifth',
+    '',
+    '',
+    '',
 ]
-const colors = [
-    'indigo',
-    'warning',
-    'pink darken-2',
-    'red lighten-1',
-    'deep-purple accent-4',
+const img_slide = [
+    slide0,
+    slide1,
+    slide2
 ]
 </script>
 
 <style lang="scss" scoped>
+.image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 </style>

@@ -28,19 +28,21 @@ $color_header: white;
     margin-left: 10px;
 }
 .products__costs{
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-weight: 700;
     @media(min-width: 1500px){
         font-size: 0.7vw;
     }
+    font-family: 'Montserrat', sans-serif;
 }
 .products__count{
-    font-size: 1.3vw;
-    font-weight: 600;
+    font-size: 1.2vw;
+    font-weight: 800;
 
     @media(min-width: 1500px){
         font-size: 0.9vw;
     }
+    font-family: 'Montserrat', sans-serif;
 }
 .products{
     display: flex;
@@ -51,7 +53,7 @@ $color_header: white;
     display: flex;
     align-items: center;
     svg{
-        font-size: 2.4vw;
+        font-size: 2.2vw;
         cursor: pointer;
     }
     @media(min-width: 1500px){
