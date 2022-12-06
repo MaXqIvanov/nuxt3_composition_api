@@ -66,6 +66,7 @@ $color_header: white;
     left: 13vw;
     width: calc(87vw);
     height: 60px;
+    max-height: 60px;
     background: $background_header;
     color: $color_header;
     padding: 0px 20px;
