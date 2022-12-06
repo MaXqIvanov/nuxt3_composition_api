@@ -5,10 +5,12 @@
 </template>
 
 <script setup lang="ts">
+    import { onMounted } from '../.nuxt/imports';
     import { useMenuStore } from '../store/menu';
 
     const menuStore = useMenuStore()
-    console.log(menuStore.nav_sidebar)
+
+    onMounted(() => menuStore.getCategory(''))
 
 </script>
 

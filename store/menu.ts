@@ -5,8 +5,10 @@ export const useMenuStore = defineStore('menu', {
         nav_sidebar: [{id: 1, name: 'Хит'}]
     }),
     actions: {
-        getCategory(payload: any){
-            this.nav_sidebar = payload
+        async getCategory(payload: any){
+          console.log('getCategory')
+          const response = await useCustomFetch('/category', {})
+          console.log(response)
         },
         addCategory(payload:any){
             console.log(payload)
