@@ -14,6 +14,6 @@ import { Category, CategoryShema } from './schemas/category.schema';
     ]
 })
 
-export class ProductsModule{    
+export class CategoryModule{    
 
 }

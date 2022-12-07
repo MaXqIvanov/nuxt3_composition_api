@@ -52,7 +52,7 @@ const img_slide = [
 .image{
     height: 100%;
     width: 100%;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
 }

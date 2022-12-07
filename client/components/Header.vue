@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class="info header__info">11</div>
+        <div class="info header__info"></div>
         <div class="profile header__profile">
             <Icon name="mdi:cart-outline"></Icon>
             <div class="separate__line"></div>
@@ -28,7 +28,7 @@ $color_header: white;
     margin-left: 10px;
 }
 .products__costs{
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-weight: 700;
     @media(min-width: 1500px){
         font-size: 0.7vw;
@@ -36,7 +36,7 @@ $color_header: white;
     font-family: 'Montserrat', sans-serif;
 }
 .products__count{
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: 800;
 
     @media(min-width: 1500px){
@@ -53,12 +53,12 @@ $color_header: white;
     display: flex;
     align-items: center;
     svg{
-        font-size: 2.2vw;
+        font-size: 2.1vw;
         cursor: pointer;
     }
     @media(min-width: 1500px){
         svg{
-            font-size: 1.8vw;
+            font-size: 1.7vw;
         }
     }
 }
