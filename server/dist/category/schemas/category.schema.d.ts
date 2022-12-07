@@ -26,5 +26,6 @@ import { HydratedDocument } from 'mongoose';
 export type CategoryDocument = HydratedDocument<Category>;
 export declare class Category {
     name: string;
+    navigate: string;
 }
 export declare const CategoryShema: import("mongoose").Schema<Category, import("mongoose").Model<Category, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Category>;
