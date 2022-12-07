@@ -2,7 +2,8 @@ import { defineStore } from "pinia";
 
 interface ICategory {
     _id: string,
-    name: number
+    name: string,
+    navigate: string,
 }
 
 
