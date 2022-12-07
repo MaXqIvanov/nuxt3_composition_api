@@ -8,7 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [CategoryModule, ConfigModule.forRoot(), MongooseModule.forRoot(`mongodb+srv://web_liter:Footbolist123@cluster0.mtot7.mongodb.net/internet_store?retryWrites=true&w=majority`)],
+  imports: [CategoryModule, ConfigModule.forRoot(), MongooseModule.forRoot(`mongodb+srv://web_liter:${process.env.DATABASE_PASSWORD}@cluster0.mtot7.mongodb.net/internet_store?retryWrites=true&w=majority`)],
   controllers: [AppController, ProodsController, UsersController],
   providers: [AppService],
 })
