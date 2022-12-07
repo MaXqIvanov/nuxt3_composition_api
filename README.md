@@ -1,4 +1,6 @@
-# Nuxt3 Pinia CompositionApi
+# Client - Nuxt3 Pinia CompositionApi
+
+# Server - Nest.js MongoDB
 
 # Nuxt 3 Minimal Starter
 
