@@ -9,26 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CategoryController = void 0;
-const category_service_1 = require("./category.service");
-const common_1 = require("@nestjs/common");
-let CategoryController = class CategoryController {
-    constructor(categoryService) {
-        this.categoryService = categoryService;
-    }
-    getAll() {
-        return this.categoryService.getAll();
-    }
+exports.CategoryShema = exports.Category = void 0;
+const mongoose_1 = require("@nestjs/mongoose");
+let Category = class Category {
 };
 __decorate([
-    (0, common_1.Get)(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Promise)
-], CategoryController.prototype, "getAll", null);
-CategoryController = __decorate([
-    (0, common_1.Controller)('api/category'),
-    __metadata("design:paramtypes", [category_service_1.CategoryService])
-], CategoryController);
-exports.CategoryController = CategoryController;
-//# sourceMappingURL=category.controller.js.map
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], Category.prototype, "name", void 0);
+Category = __decorate([
+    (0, mongoose_1.Schema)()
+], Category);
+exports.Category = Category;
+exports.CategoryShema = mongoose_1.SchemaFactory.createForClass(Category);
+//# sourceMappingURL=category.schema.js.map

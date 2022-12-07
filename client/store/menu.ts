@@ -1,19 +1,21 @@
 import { defineStore } from "pinia";
 
+interface ICategory {
+    _id: string,
+    name: number
+}
+
+
 export const useMenuStore = defineStore('menu', {
     state: ()=>({
-        nav_sidebar: [{id: 1, name: 'Хит'}]
+        category: [] as ICategory[] | null
     }),
     actions: {
-        async getCategory(payload: any){
+        async getCategory(){
           console.log('getCategory')
-          const response = await useCustomFetch('/category', {})
-          console.log(response)
+          const {data} = await useCustomFetch<ICategory[]>('/category', {})
+          this.category = data.value
         },
-        addCategory(payload:any){
-            console.log(payload)
-            this.nav_sidebar.push(payload)
-        }
     },
     
 })

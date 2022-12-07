@@ -19,7 +19,7 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [category_module_1.ProductsModule, config_1.ConfigModule.forRoot(), mongoose_1.MongooseModule.forRoot(`mongodb+srv://web_liter:Footbolist123@cluster0.mtot7.mongodb.net/internet_store?retryWrites=true&w=majority`)],
+        imports: [category_module_1.CategoryModule, config_1.ConfigModule.forRoot(), mongoose_1.MongooseModule.forRoot(`mongodb+srv://web_liter:Footbolist123@cluster0.mtot7.mongodb.net/internet_store?retryWrites=true&w=majority`)],
         controllers: [app_controller_1.AppController, proods_controller_1.ProodsController, users_controller_1.UsersController],
         providers: [app_service_1.AppService],
     })
