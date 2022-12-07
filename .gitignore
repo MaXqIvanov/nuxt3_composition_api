@@ -1,8 +1,10 @@
-node_modules
+/client/node_modules
 *.log*
-.nuxt
-.nitro
-.cache
-.output
-.env
-dist
+/client/.nuxt
+/client/.nitro
+/client/.cache
+/client/.output
+/client/.env
+/client/dist
+
+/server/node_modules
