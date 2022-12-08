@@ -35,6 +35,7 @@
 import slide0 from '~/assets/slide.jpeg'
 import slide1 from '~/assets/slide2.jpeg'
 import slide2 from '~/assets/slide3.jpeg'
+import { useMenuStore } from '../store/menu'
 
 const slides = [
     '',
@@ -46,6 +47,9 @@ const img_slide = [
     slide1,
     slide2
 ]
+const menuStore = useMenuStore()
+menuStore.getProods()
+// getProods
 </script>
 
 <style lang="scss" scoped>

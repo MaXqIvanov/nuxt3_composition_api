@@ -1,10 +1,10 @@
 <template>
     <div class="sidebar">
-        <div @click="navigateTo('/')" class="logo sidebar__logo"></div>
+        <div @click="menuStore.setCurrentCategory(undefined); navigateTo('/')" class="logo sidebar__logo"></div>
         <div class="number sidebar__number">(953) 523-83-49</div>
         <div class="sidebar__work_time">Время работы: Круглосуточно</div>
         <div v-if="(menuStore.category !== null)" class="category sidebar__category">
-            <div class="category__one" v-for="category_one in menuStore.category" :key="category_one._id" @click="navigateTo(`/menu/${category_one.navigate}`)">
+            <div class="category__one" v-for="category_one in menuStore.category" :key="category_one._id" @click="menuStore.setCurrentCategory(category_one); navigateTo(`/menu/${category_one.navigate}`)">
                 <div class="category__one__image" :style="{backgroundImage: `url(${category_one.image})`}"></div>
                 <div class="category__one__name">
                     {{category_one.name}}
