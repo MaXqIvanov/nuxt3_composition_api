@@ -23,10 +23,11 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import { HydratedDocument } from 'mongoose';
-export type CategoryDocument = HydratedDocument<Category>;
-export declare class Category {
+export type ProodsDocument = HydratedDocument<Proods>;
+export declare class Proods {
     name: string;
     navigate: string;
     image: string;
+    id_category: string;
 }
-export declare const CategoryShema: import("mongoose").Schema<Category, import("mongoose").Model<Category, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Category>;
+export declare const ProodsShema: import("mongoose").Schema<Proods, import("mongoose").Model<Proods, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Proods>;
