@@ -8,6 +8,7 @@ export class Category {
   @Prop()
   name: string;
   navigate: string;
+  image: string;
 }
 
 export const CategoryShema = SchemaFactory.createForClass(Category);

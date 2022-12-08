@@ -4,6 +4,7 @@ interface ICategory {
     _id: string,
     name: string,
     navigate: string,
+    image: string,
 }
 
 

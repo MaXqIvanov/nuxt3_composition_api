@@ -5,6 +5,7 @@
         <div class="sidebar__work_time">Время работы: Круглосуточно</div>
         <div v-if="(menuStore.category !== null)" class="category sidebar__category">
             <div class="category__one" v-for="category_one in menuStore.category" :key="category_one._id" @click="navigateTo(`/menu/${category_one.navigate}`)">
+                <div class="category__one__image" :style="{backgroundImage: `url(${category_one.image})`}"></div>
                 <div class="category__one__name">
                     {{category_one.name}}
                 </div>
@@ -23,8 +24,16 @@
 
 <style lang="scss" scoped>
 $sodebar_background: black;
+.category__one__image{
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 65%;
+    width: 20px;
+
+}
 .category__one__name{
-    font-size: 80%;
+    font-size: 65%;
+    font-weight: 600;
 }
 .category__one{
     height: 8%;
