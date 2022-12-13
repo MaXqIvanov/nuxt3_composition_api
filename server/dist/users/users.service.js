@@ -12,31 +12,36 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProodsService = void 0;
+exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const proods_schema_1 = require("./schemas/proods.schema");
-let ProodsService = class ProodsService {
-    constructor(ProodsModel) {
-        this.ProodsModel = ProodsModel;
+const users_schema_1 = require("./schemas/users.schema");
+let UsersService = class UsersService {
+    constructor(UsersModel) {
+        this.UsersModel = UsersModel;
     }
     async getAll(query) {
         if (Object.keys(query).length === 0) {
-            return await this.ProodsModel.find();
+            return await this.UsersModel.find();
         }
         else {
-            return await this.ProodsModel.find().where({ id_category: query.id_category });
+            return await this.UsersModel.find().where({ email: query.email }).sort('asc');
         }
     }
     async getOne(id) {
-        return this.ProodsModel.findById(id);
+        return this.UsersModel.findById(id);
+    }
+    async createUser(usersDto) {
+        console.log(usersDto);
+        const new_user = new this.UsersModel(usersDto);
+        return new_user.save();
     }
 };
-ProodsService = __decorate([
+UsersService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, mongoose_1.InjectModel)(proods_schema_1.Proods.name)),
+    __param(0, (0, mongoose_1.InjectModel)(users_schema_1.Users.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
-], ProodsService);
-exports.ProodsService = ProodsService;
-//# sourceMappingURL=proods.service.js.map
+], UsersService);
+exports.UsersService = UsersService;
+//# sourceMappingURL=users.service.js.map

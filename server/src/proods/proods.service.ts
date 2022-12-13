@@ -10,7 +10,6 @@ export class ProodsService {
     }
   
     async getAll(query): Promise<Proods[]>{
-      console.log(query)
       if(Object.keys(query).length === 0){
         return await this.ProodsModel.find()
       }else{
